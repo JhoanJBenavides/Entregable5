@@ -24,20 +24,20 @@ useEffect(()=>{
         <header className="bg-gradient-to-b from-gray-500 to-gray-300 relative h-[140px]">
           <img className="absolute -bottom-4 translate-y-[15%] translate-x-[55%] w-60 p-12" src={pokemonInfo?.sprites.other["official-artwork"].front_default} alt="" />
         </header>
-        <span className="text-lg font-bold pt-1"># {pokemonInfo?.id}</span>
-        <h3 className="capitalize text-lg font-bold pt-1">{pokemonInfo?.name}</h3>
-        <div>
-          <div>
-            <h5>Weight</h5>
+        <span className="text-lg font-bold"># {pokemonInfo?.id}</span>
+        <h3 className="capitalize text-lg font-bold pt-1 p-5 bg-gray-200">{pokemonInfo?.name}</h3>
+        <div className="flex-col" >
+          <div className="p-1 font-semibold bg-blue-200" >
+            <h5 className="font-bold " >Weight</h5>
             <span>{pokemonInfo?.weight}</span>
           </div>
-          <div>
-            <h5>Height</h5>
+          <div className="p-1 font-semibold bg-lime-200">
+            <h5 className="font-bold">Height</h5>
             <span>{pokemonInfo?.height}</span>
           </div>
         </div>
         <section>
-          <h4>Stats</h4>
+          <h4 className="p-5 font-bold text-lg" >Stats</h4>
           <ul className="grid gap-3">
             {pokemonInfo?.stats.map((stat)=>(
               <li key={stat.stat.name}>
